@@ -25,7 +25,7 @@ def extract_data(source):
             # "industry": td[i+4].a.contents[0],
             # "country": td[i+5].a.contents[0],
             "market_cap": td[i+6].a.contents[0],
-            "p/e": td[i+7].a.contents[0],
+            #"p/e": td[i+7].a.contents[0],
             "price": td[i+8].a.contents[0],
             "change": td[i+9].a.contents[0],
             "volume": td[i+10].a.contents[0]
@@ -43,13 +43,13 @@ def extract_data(source):
 
 def create_table_and_stringify(screener_list):
     x = PrettyTable()
-    x.field_names = ["No", "Ticker", "Market Cap", "P/E", "Price", "Change", "Volume"]
+    x.field_names = ["No", "Ticker", "Market Cap", "Price", "Change", "Volume"]
     for item in screener_list:
         x.add_row(
             [str(item["no"]), 
             str(item["ticker"]), 
             str(item["market_cap"]), 
-            str(item["p/e"]), 
+            #str(item["p/e"]), 
             str(item["price"]), 
             str(item["change"]), 
             str(item["volume"])])
