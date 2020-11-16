@@ -10,7 +10,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         if message.content.startswith('!jb'):
             channel = message.channel
-            await channel.send(display_screener())
+            await channel.send("```{0}```".format(display_table()))
 
 client = MyClient()
 client.run(DISCORD_API_KEY)
