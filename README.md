@@ -1,0 +1,2 @@
+# FinVizBot
+FOR JAVI
